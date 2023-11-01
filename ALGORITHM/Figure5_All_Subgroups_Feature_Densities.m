@@ -3,7 +3,7 @@ function Figure5_All_Subgroups_Feature_Densities
 params_Pareto_analysis;
 thr_FDR  = 0.05;
 binSize  = params_Pareto.binSize;
-load('DATA/All_selected_datasets.mat','table_selected_dataset'); 
+load([pwd,'/DATA/All_selected_datasets.mat'],'table_selected_dataset'); 
 for idx_data = 1:7 % 1) Frogs; 2) Birds; 3) Ectotherm; 4) Endotherm; 5) Internal; 6) Mammalia; 7) Reptilia;
     arch_class          = table_selected_dataset(idx_data).tableselected.arch_class;
     nametable           = table_selected_dataset(idx_data).tableselected.nametable;
@@ -13,7 +13,7 @@ for idx_data = 1:7 % 1) Frogs; 2) Birds; 3) Ectotherm; 4) Endotherm; 5) Internal
     cont_enrich_folder  = table_selected_dataset(idx_data).tableselected.cont_enrich_folder;
     
     analysis_type = 'all_species';
-    load(['Results/current_analysis/paretofront_',char(nametable),'_',char(analysis_type),'.mat'],'meanClstErrs');
+    load([pwd,'/Results/current_analysis/paretofront_',char(nametable),'_',char(analysis_type),'.mat'],'meanClstErrs');
     arc   = meanClstErrs;
     color_class  = {'r','g','b'};
     

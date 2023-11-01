@@ -1,11 +1,11 @@
 function Figure2_Tetrapods_Pareto_Front(analysis_type)
 %% This code plots the Pareto fronts and the feature densities.
-load('DATA/All_selected_datasets.mat','table_selected_dataset'); 
+load([pwd,'/DATA/All_selected_datasets.mat'],'table_selected_dataset'); 
 idx_data = 8; % idx_data = 8 is associated to the Tetrapods dataset        
 
 % Load the data points and the position of the archetypes previously found with the function "findArchetypes.m"
 nametable = table_selected_dataset(idx_data).tableselected.nametable;
-load(['Results/current_analysis/paretofront_',char(nametable),'_',char(analysis_type),'.mat'],'PvalueRatio','DataPoints_front','meanClstErrs', ...
+load([pwd,'/Results/current_analysis/paretofront_',char(nametable),'_',char(analysis_type),'.mat'],'PvalueRatio','DataPoints_front','meanClstErrs', ...
     'NArchetypes','El1','El2','Coeff2d','namefolder');
 params_Pareto_analysis; % load the parameters for the Pareto analysis
 

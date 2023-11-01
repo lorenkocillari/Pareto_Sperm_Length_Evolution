@@ -1,7 +1,7 @@
 %% PDF of body mass and sperm length in tetrapods
-load('DATA/All_selected_datasets.mat','table_selected_dataset'); 
+load([pwd,'/DATA/All_selected_datasets.mat'],'table_selected_dataset'); 
 idx_data = 8; nametable = table_selected_dataset(idx_data).tableselected.nametable;
-load(['Results/current_analysis/paretofront_',char(nametable),'_',char(analysis_type),'.mat']);
+load([pwd,'/Results/current_analysis/paretofront_',char(nametable),'_',char(analysis_type),'.mat']);
 CLASS  = {'Amphibia','Aves','Mammalia','Reptilia'}; color_class = {[221, 119, 70]/255,  [144, 155, 70]/255, [10, 135, 164]/255,[0,0,0]};
 r = 204/255; g = 119/255; b = 34/255; selectedColor = [r, g, b];
 n_bins_PDF = 25;

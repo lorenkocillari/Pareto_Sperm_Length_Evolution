@@ -2,9 +2,9 @@ function Figure4_All_subgroups_Pareto_Fronts(analysis_type)
 %% Plot the Pareto fronts for each selected subgroup
 for idx_data = 1:7 % 1) Frogs; 2) Birds; 3) Ectotherm; 4) Endotherm; 5) Internal; 6) Mammalia; 7) Reptilia;
     % Load the data points and the position of the archetypes previously found with the function "findArchetypes.m"
-    load('DATA/All_selected_datasets.mat','table_selected_dataset'); 
+    load([pwd,'/DATA/All_selected_datasets.mat'],'table_selected_dataset'); 
     nametable = table_selected_dataset(idx_data).tableselected.nametable;
-    load(['Results/current_analysis/paretofront_',char(nametable),'_',char(analysis_type),'.mat'],'PvalueRatio','DataPoints_front','meanClstErrs', ...
+    load([pwd,'/Results/current_analysis/paretofront_',char(nametable),'_',char(analysis_type),'.mat'],'PvalueRatio','DataPoints_front','meanClstErrs', ...
         'NArchetypes','El1','El2','Coeff2d','namefolder');
     params_Pareto_analysis;    
     

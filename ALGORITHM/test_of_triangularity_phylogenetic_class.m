@@ -1,6 +1,6 @@
 function test_of_triangularity_phylogenetic_class(analysis_type)
 %% Test of triangularity for the Pareto front
-load('DATA/All_selected_datasets.mat','table_selected_dataset'); 
+load([pwd,'/DATA/All_selected_datasets.mat'],'table_selected_dataset'); 
 idx_data = 8;
 nametable       = table_selected_dataset(idx_data).tableselected.nametable;
 namefolder      = table_selected_dataset(idx_data).tableselected.namefolder;
@@ -28,5 +28,5 @@ DataPoints_selected = DataPoints(logical(DataPoints_idx_selected), :);
 phylogenetic_class_individuals_selected = phylogenetic_class(logical(phylogenetic_class_idx_selected));
 phylogenetic_class_individuals_selected_to_plot = table_selected_dataset(idx_data).tableselected.Table_sperm_class.class(logical(phylogenetic_class_idx_selected));
 %%%%%%%%%%%%%%%%%%%%
-save(['DATA/phylogenetic_class_individuals.mat'],'phylogenetic_class_individuals_selected','phylogenetic_class_individuals_selected_to_plot');
+save([pwd,'/DATA/phylogenetic_class_individuals.mat'],'phylogenetic_class_individuals_selected','phylogenetic_class_individuals_selected_to_plot');
 findArchetypes(nametable, namefolder, DataPoints_selected, phylogenetic_class_individuals_selected, analysis_type, name_class)

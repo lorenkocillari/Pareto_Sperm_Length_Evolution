@@ -4,7 +4,7 @@ function Figure3_Tetrapods_Feature_Densities
     thr_FDR             = 0.05;
     binSize             = params_Pareto.binSize;
     
-    load('DATA/All_selected_datasets.mat','table_selected_dataset'); 
+    load([pwd,'/DATA/All_selected_datasets.mat'],'table_selected_dataset'); 
     idx_data            = 8; % idx_data = 8 is associated to the Tetrapods dataset 
     arch_class          = table_selected_dataset(idx_data).tableselected.arch_class;
     nametable           = table_selected_dataset(idx_data).tableselected.nametable;
@@ -14,7 +14,7 @@ function Figure3_Tetrapods_Feature_Densities
     cont_enrich_folder  = table_selected_dataset(idx_data).tableselected.cont_enrich_folder;
     
     analysis_type = 'all_species';
-    load(['Results/current_analysis/paretofront_',char(nametable),'_',char(analysis_type),'.mat'],'meanClstErrs');
+    load([pwd,'/Results/current_analysis/paretofront_',char(nametable),'_',char(analysis_type),'.mat'],'meanClstErrs');
     arc = meanClstErrs;
     color_class = {'r','g','b'};
     

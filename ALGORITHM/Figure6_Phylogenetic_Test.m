@@ -1,13 +1,13 @@
 function Figure6_Phylogenetic_Test(analysis_type)
 %% Test of triangularity for the Pareto front
-load('DATA/All_selected_datasets.mat','table_selected_dataset');
-load(['DATA/phylogenetic_class_individuals.mat'],'phylogenetic_class_individuals_selected_to_plot');
+load([pwd,'/DATA/All_selected_datasets.mat'],'table_selected_dataset');
+load([pwd,'/DATA/phylogenetic_class_individuals.mat'],'phylogenetic_class_individuals_selected_to_plot');
 
 % Load the data points and the position of the archetypes previously found with the function "findArchetypes.m"
 idx_data = 8;
 nametable = table_selected_dataset(idx_data).tableselected.nametable;
 name_class = table_selected_dataset(idx_data).tableselected.name_class; arch_class = table_selected_dataset(idx_data).tableselected.arch_class;
-load(['Results/current_analysis/paretofront_',char(nametable),'_',char(analysis_type),'.mat'],'PvalueRatio','DataPoints_front','meanClstErrs', ...
+load([pwd,'/Results/current_analysis/paretofront_',char(nametable),'_',char(analysis_type),'.mat'],'PvalueRatio','DataPoints_front','meanClstErrs', ...
     'NArchetypes','El1','El2','Coeff2d','namefolder');
 params_Pareto_analysis; % load the parameters for the Pareto analysis
 

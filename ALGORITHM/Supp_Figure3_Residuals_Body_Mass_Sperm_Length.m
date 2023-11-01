@@ -1,6 +1,6 @@
 function Supp_Figure3_Residuals_Body_Mass_Sperm_Length
 %%
-load('DATA/All_selected_datasets.mat','table_selected_dataset'); 
+load([pwd,'/DATA/All_selected_datasets.mat'],'table_selected_dataset'); 
 idx_data = 8;
 clutch_size_log = table_selected_dataset(idx_data).tableselected.Table_sperm_class.clutch_size_log;
 testes_mass_log = table_selected_dataset(idx_data).tableselected.Table_sperm_class.testes_mass_log;

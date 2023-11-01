@@ -18,9 +18,9 @@ function [table_selected_dataset] = add_residuals_to_datasets(idx_data, Table_da
     table_selected_dataset.name_class        = name_dataset;
     table_selected_dataset.nametable         = name_dataset;
     table_selected_dataset.arch_class        = arch_class;
-    table_selected_dataset.namefolder        = ['Results/current_analysis/Figure1/',char(table_selected_dataset.nametable),'/']; 
-    table_selected_dataset.cont_enrich_folder  = ['Results/current_analysis/Figure1/',char(table_selected_dataset.nametable),'/Cont_enrich_',char(table_selected_dataset.nametable),'/']; 
-    table_selected_dataset.disc_enrich_folder  = ['Results/current_analysis/Figure1/',char(table_selected_dataset.nametable),'/Disc_enrich_',char(table_selected_dataset.nametable),'/'];
-    table_selected_dataset.outputs_folder      = 'Results/current_analysis/outputs/';
+    table_selected_dataset.namefolder        = [pwd,'/Results/current_analysis/Figure1/',char(table_selected_dataset.nametable),'/']; 
+    table_selected_dataset.cont_enrich_folder  = [pwd,'/Results/current_analysis/Figure1/',char(table_selected_dataset.nametable),'/Cont_enrich_',char(table_selected_dataset.nametable),'/']; 
+    table_selected_dataset.disc_enrich_folder  = [pwd,'/Results/current_analysis/Figure1/',char(table_selected_dataset.nametable),'/Disc_enrich_',char(table_selected_dataset.nametable),'/'];
+    table_selected_dataset.outputs_folder      = [pwd,'/Results/current_analysis/outputs/'];
     mkdir(table_selected_dataset.outputs_folder); mkdir(table_selected_dataset.cont_enrich_folder); mkdir(table_selected_dataset.disc_enrich_folder); 
 end
