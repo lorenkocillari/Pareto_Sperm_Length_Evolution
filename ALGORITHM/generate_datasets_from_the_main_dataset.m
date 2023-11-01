@@ -1,6 +1,6 @@
 function generate_datasets_from_the_main_dataset
 %% Datasets are sorted in the following order: 1) Frogs; 2) Birds; 3) Ectotherm; 4) Endotherm; 5) Internal; 6) Mammalia; 7) Reptilia; 8) Tetrapods;
-Table_sperm = readtable([pwd,"DATA\Pareto_sperm length_evolution_data_edited05.10.23.xlsx"]); % Read the main dataset from the .xlsx file  
+Table_sperm = readtable([pwd,'/DATA/Pareto_sperm length_evolution_data_edited05.10.23.xlsx']); % Read the main dataset from the .xlsx file  
 name_class = {'Amphibia','Aves','Ectotherms','Endotherms','Internal','Mammalia','Reptilia','Tetrapods'};
 color_class_ALL = {[144, 155, 70]/255, [221, 119, 70]/255, [122, 115, 253]/255,  [246, 70, 29]/255, [152, 0, 54]/255,  [10, 135, 164]/255, [0,1,0], [0, 0, 0]};
 arch_class_ALL = {'F','B','EC','EN', 'I','M','R','T'};
