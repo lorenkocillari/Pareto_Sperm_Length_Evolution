@@ -52,5 +52,5 @@ for idx_data   = 1:length(name_class)
             clear Table_data name_dataset
     end
 end
-save('DATA/All_selected_datasets.mat','table_selected_dataset');
+save([pwd,'/DATA/All_selected_datasets.mat'],'table_selected_dataset');
 end
