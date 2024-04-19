@@ -13,9 +13,9 @@ To get started, follow these steps:
 
 **PACKAGE CONTENT**  
 The package comprises two main folders:
-•	ALGORITHM: This folder contains all the necessary customized code. Pareto optimality analyses were based on the ParTI toolbox (https://www.weizmann.ac.il/mcb/UriAlon/download/ParTI). 
-•	Results: This folder contains the output results.
-•	DATA: This folder contains the input files, including the main dataset “Pareto_sperm length_evolution_data_edited05.10.23.xslx”
+1. ALGORITHM: This folder contains all the necessary customized code. Pareto optimality analyses were based on the ParTI toolbox (https://www.weizmann.ac.il/mcb/UriAlon/download/ParTI).
+2. Results: This folder contains the output results.
+3. DATA: This folder contains the input files, including the main dataset “Pareto_sperm length_evolution_data_edited05.10.23.xslx”
 These folders collectively provide all the resources needed to reproduce the results presented in the main text of the associated manuscript.
 
 **INSTRUCTIONS TO RUN THE SCRIPTS AND REPRODUCE THE RESULTS**  
@@ -23,15 +23,15 @@ The main script for the analyses is Main_Code_Pareto_Analyses.m. Within this scr
 If you wish to perform the entire analysis from scratch, please uncomment the following lines in Main_Code_Pareto_Analyses.m: Lines 14, 15, 36, 37, 44, 45, and 57.
 Outline of the Analysis Pipeline:
 1.	Select the parameters of the Pareto analyses (for example):
-•	params_Pareto.maxRuns = 1000
-•	params_Pareto.numIter = 50
-•	params_Pareto.algNum   = 1   (this corresponds to the Sisal algorithm)
-2.	Pre-process the Dataset:
-•	Run “generate_datasets_from_the_main_dataset.m” to prepare the dataset for analysis.
-3.	Find Significant Pareto Fronts:
-•	Execute “test_of_triangularity.m” to identify significant Pareto fronts.
-4.	Assess the phylogenetic dependencies:
-•	Run the “phylogenetic_tests_based_on_phylogenetic_tree.m” to classify, at a certain time point, the tree tips based on common ancestor nodes. This function also contains the code for testing phylogenetic dependencies for the subsampled Pareto fronts.
+  a. params_Pareto.maxRuns = 1000
+  b. params_Pareto.numIter = 50
+  c. params_Pareto.algNum   = 1   (this corresponds to the Sisal algorithm)
+4.	Pre-process the Dataset:
+  a. un “generate_datasets_from_the_main_dataset.m” to prepare the dataset for analysis.
+6.	Find Significant Pareto Fronts:
+  a. Execute “test_of_triangularity.m” to identify significant Pareto fronts.
+8.	Assess the phylogenetic dependencies:
+  a. Run the “phylogenetic_tests_based_on_phylogenetic_tree.m” to classify, at a certain time point, the tree tips based on common ancestor nodes. This function also contains the code for testing phylogenetic dependencies for the subsampled Pareto fronts.
 
 **LICENSE**  
 This project is covered under the MIT License.
