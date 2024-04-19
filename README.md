@@ -38,11 +38,9 @@ Outline of the Analysis Pipeline:
 •	Run the “phylogenetic_tests_based_on_phylogenetic_tree.m” to classify, at a certain time point, the tree tips based on common ancestor nodes. This function also contains the code for testing phylogenetic dependencies for the subsampled Pareto fronts.
 
 **LICENSE**
-
 This project is covered under the MIT License.
 
 **CITATION**
-
 For usage of the package and associated manuscript, please cite according to:
 
 
