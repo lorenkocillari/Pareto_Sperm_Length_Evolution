@@ -7,9 +7,10 @@ We tested the code in Matlab R2021a. We constructed the phylogenetic tree in R v
 **INSTALLATION GUIDE**  
 To get started, follow these steps:
 1.	Download and extract all the files from the Github repository.
-2.  Download from: https://figshare.com/articles/dataset/Dataset_Tetrapod_sperm_length_evolution_in_relation_to_body_mass_is_shaped_by_multiple_trade-offs_/26022289 the two datasets: 1) Pareto_sperm_length_evolution.csv and 2) tetrapods_phyl_tree.tre 
-3.	Run the function “Main_Code_Pareto_Analyses.m” to reproduce the results of the manuscript.
-4.	No installation is required.
+2.  Download from: https://figshare.com/articles/dataset/Dataset_Tetrapod_sperm_length_evolution_in_relation_to_body_mass_is_shaped_by_multiple_trade-offs_/26022289 the two datasets: 1) Pareto_sperm_length_evolution.csv and 2) tetrapods_phyl_tree.tre
+3.  Create a DATA/ folder in the main directory and move the two files 1) Pareto_sperm_length_evolution.csv and 2) tetrapods_phyl_tree.tre in the DATA/ folder.
+4.	Run the function “Main_Code_Pareto_Analyses.m” to reproduce the results of the manuscript.
+5.	No installation is required.
 
 **PACKAGE CONTENT**  
 The package comprises two main folders:
