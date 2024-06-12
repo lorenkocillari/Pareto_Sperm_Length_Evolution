@@ -6,24 +6,23 @@ We tested the code in Matlab R2021a. We constructed the phylogenetic tree in R v
 
 **INSTALLATION GUIDE**  
 To get started, follow these steps:
-1.	Download all the files into a single directory.
-2.	Unzip all the zip files.
+1.	Download and extract all the files from the Github repository.
+2.  Download from: https://figshare.com/articles/dataset/Dataset_Tetrapod_sperm_length_evolution_in_relation_to_body_mass_is_shaped_by_multiple_trade-offs_/26022289 the two datasets: 1) Pareto_sperm_length_evolution.csv and 2) tetrapods_phyl_tree.tre 
 3.	Run the function “Main_Code_Pareto_Analyses.m” to reproduce the results of the manuscript.
 4.	No installation is required.
 
 **PACKAGE CONTENT**  
 The package comprises two main folders:
 1. ALGORITHM: This folder contains all the necessary customized code. Pareto optimality analyses were based on the ParTI toolbox (https://www.weizmann.ac.il/mcb/UriAlon/download/ParTI).  
-2. Results: This folder contains the output results.  
-3. DATA: This folder contains the input files, including the main dataset “Pareto_sperm length_evolution_data_edited05.10.23.xslx”  
+2. Results: This folder contains the output results tha are necessary to reproduce the results of the paper.  
+3. DATA: This folder must contain the two datasets (see the instructions above): 1) Pareto_sperm_length_evolution.csv and 2) tetrapods_phyl_tree.tre 
 These folders collectively provide all the resources needed to reproduce the results presented in the main text of the associated manuscript.
 
 **INSTRUCTIONS TO RUN THE SCRIPTS AND REPRODUCE THE RESULTS**  
-The main script for the analyses is Main_Code_Pareto_Analyses.m. Within this script, you will find a few lines of code that have been commented out. This choice was made to allow users to directly reproduce the results of the manuscript without redoing the entire analyses from scratch. 
-If you wish to perform the entire analysis from scratch, please uncomment the following lines in Main_Code_Pareto_Analyses.m: Lines 14, 15, 36, 37, 44, 45, and 57.
+The main script for the analyses is Main_Code_Pareto_Analyses.m contains in the first part the scripts necessary to directly reproduce the results of the manuscript without redoing the entire analyses from scratch. From line 56 on in the Main_Code_Pareto_Analyses.m script the user can redo the analyses from scratch.
 
 **Outline of the Analysis Pipeline**
-1.	Select the parameters of the Pareto analyses (for example): params_Pareto.maxRuns = 1000, params_Pareto.numIter = 50, params_Pareto.algNum   = 1   (this corresponds to the Sisal algorithm)  
+1.	Select the parameters of the Pareto analyses (for example): params_Pareto.maxRuns = 100, params_Pareto.numIter = 10, params_Pareto.algNum = 1   (this corresponds to the Sisal algorithm)  
 4.	Pre-process the Dataset: Run “generate_datasets_from_the_main_dataset.m” to prepare the dataset for analysis.  
 6.	Find Significant Pareto Fronts: Run “test_of_triangularity.m” to identify significant Pareto fronts.  
 8.	Assess the phylogenetic dependencies: Run the “phylogenetic_tests_based_on_phylogenetic_tree.m” to classify, at a certain time point, the tree tips based on common ancestor nodes. This function also contains the code for testing phylogenetic dependencies for the subsampled Pareto fronts.  
